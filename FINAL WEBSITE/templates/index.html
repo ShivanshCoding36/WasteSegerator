@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Dost</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+
+</head>
+<body>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="home-content">
+            <h1>ECODOST</h1>
+            <p class="team-statement">Innovative Waste Management Solutions</p>
+            <p class="tagline">Transforming Waste into Resources</p>
+        </div>
+        <div class="hero-content">
+            <h1>Transforming Waste Management with AI</h1>
+            <p>Join us in building a sustainable, safe, and clean world with cutting-edge waste management technology.</p>
+            <button class="hero-btn" onclick="scrollToSection('problem')">Learn More</button>
+        </div>
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='img/DRONE.jpeg') }}" alt="Project Image" class="project-photo">
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section glass">
+        <h2>The Waste Crisis in India</h2>
+        <p>India produces around 62 million tonnes of waste annually, with urban areas leading due to rapid growth and consumerism. This waste challenge burdens landfills, contributing to environmental degradation and health risks.</p>
+        <div class="case-study">
+            <h3>Case Study: Bhiwandi Landfill Fire</h3>
+            <p>The 2016 Bhiwandi landfill fire in Maharashtra highlighted the consequences of inadequate waste management. Triggered by methane buildup, the fire produced toxic smoke for weeks, affecting nearby communities and causing respiratory issues. Unlike traditional methods, our approach focuses on early detection and proactive management to prevent such crises.</p>
+            <img src="{{ url_for('static', filename='img/BHIWANDI.JPEG') }}" alt="Bhiwandi Landfill Fire" class="case-study-image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <h2>Our FEATURES</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="card-front">
+                    <h3>Robotic Arms for Automated Sorting</h3>
+                    <p>High-speed robotic arms that accurately sort metal, paper, plastic, and biodegradable waste, maximizing recycling rates.</p>
+                </div>
+                <div class="card-back">
+                    <img src="{{ url_for('static', filename='img/ARM.jpeg') }}" alt="Robotic Arm" class="feature-image">
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-front">
+                    <h3>AI-Powered Waste Identification</h3>
+                    <p>Advanced algorithms with over 90% accuracy in waste identification, adapting to new materials for optimal efficiency.</p>
+                </div>
+                <div class="card-back">
+                    <img src="{{ url_for('static', filename='img/app.jpg') }}" alt="AI System" class="feature-image">
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-front">
+                    <h3>Real-Time Monitoring Application</h3>
+                    <p>Our app provides immediate insights for landfill monitoring, enabling data-driven decisions.</p>
+                </div>
+                <div class="card-back">
+                    <img src="{{ url_for('static', filename='img/APP.jpeg') }}" alt="Monitoring App" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solutions" class="solution-section">
+        <h2>Our Solution</h2>
+        <p>Our waste management system transforms waste into resources, improving segregation, recycling, and composting with AI, ML, and robotics. We collaborate with local governments, provide tailored solutions, and prioritize transparency with regular updates and blockchain tracking for a sustainable, zero-waste future.</p>
+    </section>
+
+    <!-- Registration Section -->
+<!-- Registration Section -->
+<section id="register" class="section glass">
+    <h2>Become a Part in Saving the World</h2>
+    <p>“Join Us for a Safer, Cleaner Planet”<br>Support responsible waste management by signing up today.</p>
+    <form id="registration-form">
+        <input type="text" name="name" placeholder="Full Name" required id="name">
+        <input type="email" name="email" placeholder="Email Address" required id="email" autocomplete="off">
+        <input type="text" name="address" placeholder="Address" required id="address">
+        <input type="tel" name="phone" placeholder="Phone Number" required id="phone">
+        <input type="text" name="method" placeholder="Preferred Waste Collection Method" required id="method">
+        <button type="submit" style="margin-left: 10px;">Register</button>
+    </form>
+    <p id="success-message" class="hidden">Thank you for registering! We will be in touch soon.</p>
+</section>
+
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+        <div class="impact-block">
+            <h3>Future Improvements</h3>
+            <p>We aim to expand to rural areas, integrate predictive analytics, and continuously improve AI to adapt to evolving waste patterns. Your feedback is invaluable to us.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="impact-block">
+            <h3>Our Vision for a Sustainable Future</h3>
+            <p>Our solution reduces landfill dependency and methane emissions, paving the way for a cleaner, healthier environment for future generations.</p>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="faqs-section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <ul>
+            <li><strong>What was the Love Canal disaster, and why is it important?</strong> 
+                The Love Canal disaster highlights the importance of regulated waste disposal, a priority we address with our technology.</li>
+            <li><strong>How does your AI system help prevent environmental hazards like Love Canal?</strong>
+                 Our AI system sorts and monitors waste with unmatched accuracy, reducing contamination risks.</li>
+            <li><strong>What environmental benefits does your system provide?</strong> 
+                It reduces greenhouse gases, conserves resources, and promotes ecosystem health.</li>
+            <li><strong>How can I contribute?</strong> 
+                Register with us to ensure responsible waste management.</li>
+            <li><strong>How does real-time monitoring work?</strong> 
+                Our app continuously tracks waste processing with real-time alerts and insights.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AI Waste Management System | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll to Sections
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        }
+        
+        // Registration Form Submission
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                phone: document.getElementById('phone').value,
+                method: document.getElementById('method').value
+            };
+        
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) return response.json();
+                return response.json().then(err => Promise.reject(err));
+            })
+            .then(data => {
+                document.getElementById('success-message').classList.remove('hidden');
+                document.getElementById('registration-form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert(error.message || 'Registration failed. Please try again.');
+            });
+        });
+
+        // Toggle menu visibility
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+    }
+}
+
+// Close menu when a link is clicked
+document.querySelectorAll('#nav-links li a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (screen.width < 600){
+        document.getElementById('nav-links').style.display = 'none';}
+    });
+});
+
+        </script>
+        
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/21/07/20241121073320-TR53JIMV.js"></script>
+        
+</body>
+</html>
